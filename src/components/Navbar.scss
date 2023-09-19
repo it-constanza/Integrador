@@ -1,0 +1,64 @@
+@import "../styles/colores.scss";
+
+
+.nav-bar {
+    display: flex;
+    background-color: $color-rosa3;
+    justify-content: center;
+    align-items: center;
+
+
+    &__logo-container {
+        background-color: $color-blanco;
+        max-width: 7em;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+        display: flex;
+        margin-right: 1em;
+        margin-top: 5px;
+
+        @media (max-width: 768px) {
+            & {
+                display: none;
+            }
+        }
+
+        img {
+            width: 100%;
+            object-fit: fill;
+        }
+    }
+
+
+
+    &__nav-list {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__nav-item {
+        text-align: center;
+        background-color: $color-rosa1 ;
+    }
+
+    &__nav-link {
+        display: block;
+        background-color: $color-gris;
+        color: #fff;
+        padding: 1em 2em;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: none;
+        }
+    }
+}
