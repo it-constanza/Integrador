@@ -8,7 +8,7 @@ const Header = () => {
       <input type="checkbox" id="menu" />
       <Navbar />
       <div className="search-bar">
-        <div className="search-bar__logo-container">Logo</div>
+      
         <form action="" className="search-bar__form-container">
           <label htmlFor="busqueda" className="search-bar__form-label">
             Buscar
@@ -16,7 +16,7 @@ const Header = () => {
           <input type="search" className="search-bar__form-search" id="busqueda" />
           <input type="submit" value="Buscar" className="search-bar__form-submit" />
         </form>
-        <Link className="search-bar__carrito-container" to="/carrito">C</Link>
+        <Link className="search-bar__carrito-container" to="/carrito"> <img src="/img/bolsavacia.png" alt="" /> </Link>
         <div className="menu-toggle">
           <label htmlFor="menu" className="menu-toggle__label">
             <span className="menu-toggle__top-bread"></span>

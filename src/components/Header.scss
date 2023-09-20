@@ -1,162 +1,219 @@
 /* ------------------------------------- */
 /* HEADER                                */
 /* ------------------------------------- */
+@import "../styles/colores.scss";
 
 .main-header {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(251, 238, 230, 0.64);
+    ;
+  }
+
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column-reverse;
+    }
+  }
+
+
+}
+
+#menu {
+  display: none;
+
+  &:checked+.nav-bar {
+    display: block;
+  }
+
+  &:checked~.search-bar .menu-toogle__label {
+    background-color: $color-rosa1 ;
+  }
+
+}
+
+/* ------------------------------------- */
+/* NAVBAR                                */
+/* ------------------------------------- */
+
+.nav-bar {
+  display: flex;
+  background-color: $color-rosa3;
+  justify-content: center;
+  align-items: center;
+
+
+  &__logo-container {
+    background-color: $color-blanco;
+    max-width: 7em;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
     display: flex;
-    flex-direction: column;
-  
-    @media (max-width: 768px) {
-      & {
-        flex-direction: column-reverse;
-      }
-    }
-  
-  
-  }
-  
-  #menu {
-    display: none;
-  
-    &:checked + .nav-bar {
-      display: block;
-    }
-  
-    &:checked ~ .search-bar .menu-toogle__label {
-      background-color: yellow;
-    }
-  
-  }
-  
-  /* ------------------------------------- */
-  /* NAVBAR                                */
-  /* ------------------------------------- */
-  
-  .nav-bar {
-    background-color: mediumaquamarine;
-  
-    &__nav-list {
-      display: flex;
-      list-style-type: none;
-      justify-content: center;
-  
-      @media (max-width: 768px) {
-        & {
-          flex-direction: column;
-        }
-      }
-    }
-  
-    &__nav-item {
-      text-align: center;
-      background-color: pink;
-    }
-  
-    &__nav-link {
-      display: block;
-      background-color: purple;
-      color: #fff;
-      padding: 1em 2em;
-      text-decoration: none;
-    }
-  
+    margin-right: 1em;
+    margin-top: 5px;
+
     @media (max-width: 768px) {
       & {
         display: none;
       }
     }
+
+    img {
+      width: 100%;
+      object-fit: fill;
+    }
   }
-  
-  /* ------------------------------------- */
-  /* SEARCH BAR                            */
-  /* ------------------------------------- */
-  
-  .search-bar {
-    background-color: olivedrab;
+
+
+
+  &__nav-list {
     display: flex;
-    justify-content: space-between;
-  
-    &__logo-container,
-    &__form-container {
-      padding: 1em;
-    }
-  
-    &__logo-container {
-      background-color: yellow;
-    }
-  
-    &__form-container {
-      background-color: gold;
-      display: flex;
-      flex-basis: 100%;
-      justify-content: center;
-    }
-  
-    &__form-label {
-      background-color: greenyellow;
-    }
-  
-    &__form-search {
-      background-color: deeppink;
-      width: 70%;
-    }
-  
-    &__form-submit {
-      background-color: darkslategray;
-      color: white;
-    }
-  
-    &__carrito-container {
-      flex: 0 0 3em; /* shorthand (grow shrink basis */
-      background-color: goldenrod;
-    }
-  }
-  
-  /* ------------------------------------- */
-  /* MENU TOOGLE                           */
-  /* ------------------------------------- */
-  
-  .menu-toggle {
-    display: none;
-    background-color: red;
-    flex: 0 0 3em;
-    position: relative;
-    cursor: pointer;
-  
-    &__label {
-      display: block;
-      background-color: black;
-      height: 100%;
-    }
-  
-    &__top-bread,
-    &__meat,
-    &__bottom-bread {
-      display: block;
-      background-color: #333;
-      height: .2em;
-      position: absolute;
-      left: .5em;
-      right: .5em;
-    }
-  
-    &__top-bread {
-      top: .8em;
-    }
-  
-    &__meat {
-      top: 50%;
-      margin-top: -.1em;
-    }
-  
-    &__bottom-bread {
-      bottom: .8em;
-    }
-  
+    list-style-type: none;
+    justify-content: center;
+
     @media (max-width: 768px) {
       & {
-        display: block;
+        flex-direction: column;
       }
     }
   }
-  
+
+  &__nav-item {
+    text-align: center;
+    background-color: $color-rosa1 ;
+  }
+
+  &__nav-link {
+    display: block;
+    background-color: $color-gris;
+    color: #fff;
+    padding: 1em 2em;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+/* ------------------------------------- */
+/* SEARCH BAR                            */
+/* ------------------------------------- */
+
+.search-bar {
+  background-color: $color-rosa3;
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  max-height: 8em;
+
+  &__form-label {
+    display: none;
+  }
+
+  &__form-container {
+    padding: 1em;
+
+  }
+
+  &__form-container {
+    background-color: $color-rosa3;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  &__form-label {
+    background-color: $color-rosa3;
+  }
+
+  &__form-search {
+    background-color: $color-rosa2;
+    width: 70%;
+    height: 4em;
+  }
+
+  &__form-submit {
+    background-color: $color-gris;
+    color: $color-negrovio;
+    width: 10%;
+    font-size: 0.7rem;
+  }
+
+  &__carrito-container {
+
+    flex: 0 0 5em;
+    max-height: 6em;
+    background-color: $color-negrovio;
+    padding: 0.5rem;
+
+    img {
+      width: 100%;
+      justify-self: center;
+      align-self: center;
+    }
+
+  }
+
+  &__carrito-container:hover {
+
+
+    background-color: $color-rosa5;
+
+  }
+
+}
+
+/* ------------------------------------- */
+/* MENU TOOGLE                           */
+/* ------------------------------------- */
+
+.menu-toggle {
+  display: none;
+  background-color: $color-blanco;
+  flex: 0 0 3em;
+  position: relative;
+  cursor: pointer;
+
+  &__label {
+    display: block;
+    background-color: $color-gris;
+    height: 100%;
+  }
+
+  &__top-bread,
+  &__meat,
+  &__bottom-bread {
+    display: block;
+    background-color: $color-blanco;
+    height: .2em;
+    position: absolute;
+    left: .5em;
+    right: .5em;
+  }
+
+  &__top-bread {
+    top: .8em;
+  }
+
+  &__meat {
+    top: 50%;
+    margin-top: -.1em;
+  }
+
+  &__bottom-bread {
+    bottom: .8em;
+  }
+
+  @media (max-width: 768px) {
+    & {
+      display: block;
+    }
+  }
+}
