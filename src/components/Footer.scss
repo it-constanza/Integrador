@@ -1,0 +1,57 @@
+@import "/src/styles/colores.scss";
+
+.main-footer {
+    display: flex;
+    color: $color-rosa;
+
+    flex-direction: column;
+
+
+
+    @media (max-width: 768px) {
+        & {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__p {
+        font-size: small;
+    }
+
+}
+
+.nav-foot {
+    background-color: $color-rosa1;
+
+    &__nav-list {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__nav-item {
+        text-align: center;
+        background-color: $color-rosa1;
+    }
+
+    &__nav-link {
+        display: block;
+        background-color: $color-rosa1;
+        color: $color-rosa;
+        padding: 1em 2em;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: none;
+        }
+    }
+
+}
