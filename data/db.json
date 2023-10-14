@@ -1,64 +1,26 @@
 {
   "productos": [
     {
-      "nombre": "IPhone 11 Pro Max",
-      "foto": "img/apple-iphone-11-pro-max.jpg",
-      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing.",
-      "precio": 250.5,
-      "stock": "4",
-      "marca": "Apple",
-      "categoria": "celulares",
-      "id": 1,
-      "envio": false,
-      "cantidad": 2
-    },
-    {
-      "nombre": "IPhone 12",
-      "foto": "img/apple-iphone-12.jpg",
-      "detalles": "Quasi cupiditate quisquam facere molestiae",
-      "precio": 240.3,
-      "stock": "4",
-      "marca": "Apple",
-      "categoria": "celulares",
-      "id": 2,
-      "envio": true,
-      "cantidad": 2
-    },
-    {
-      "nombre": "Auriculares Sony",
-      "foto": "img/auriculares-sony.jpg",
-      "detalles": "Saepe enim ipsa facilis velit quidem voluptatibus totam dicta",
-      "precio": 985,
-      "stock": 4,
-      "marca": "Sleek Cotton Chips",
-      "categoria": "Refined",
-      "id": 3,
-      "envio": true,
-      "cantidad": 1
-    },
-    {
       "nombre": "Camara Canon",
       "detalles": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       "foto": "img/camara-canon.jpg",
-      "precio": 678,
+      "precio": "900",
       "stock": 7,
       "marca": "Rustic Soft Tuna",
       "categoria": "Generic",
       "id": 4,
-      "envio": true,
-      "cantidad": 3
+      "envio": true
     },
     {
       "nombre": "Samsung",
       "detalles": "Facere molestiae odio neque rerum provident voluptas",
       "foto": "img/celular-samsung.jpg",
       "precio": 1200,
-      "stock": 4,
+      "stock": "5",
       "marca": "Samsung",
       "categoria": "celulares",
       "id": 5,
-      "envio": true,
-      "cantidad": 5
+      "envio": true
     },
     {
       "id": 6,
@@ -80,7 +42,7 @@
       "categoria": "Drones",
       "detalles": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       "foto": "img/dji-mavic-2-pro.jpg",
-      "envio": false
+      "envio": true
     },
     {
       "id": 8,
@@ -113,7 +75,43 @@
       "categoria": "Electro",
       "detalles": "Nuevo producto",
       "foto": "img/apple-iphone-11-pro-max.jpg",
+      "envio": true
+    },
+    {
+      "id": 11,
+      "nombre": "Quo sint nisi dolor",
+      "precio": "Commodo deserunt pro",
+      "stock": "Eum fugiat aut deser",
+      "marca": "Elit consequat Eli",
+      "categoria": "Dignissimos sit ius",
+      "detalles": "Voluptatem sit inci",
+      "foto": "http://localhost:5173/img/apple-iphone-11-pro-max.jpg",
       "envio": false
+    },
+    {
+      "id": 12,
+      "nombre": "Quos et labore numqu",
+      "precio": "Eveniet placeat mi",
+      "stock": "Dolores aut molestia",
+      "marca": "Atque cupidatat qui ",
+      "categoria": "Aut anim vero velit ",
+      "detalles": "Sint consequatur pr",
+      "foto": "http://localhost:5173/img/apple-iphone-11-pro-max.jpg",
+      "envio": true
+    },
+    {
+      "id": 13,
+      "nombre": "Adipisci saepe cillu",
+      "precio": "Quod neque et conseq",
+      "stock": "Minus esse in in mag",
+      "marca": "Deleniti odit enim a",
+      "categoria": "Nostrud inventore do",
+      "detalles": "Id assumenda dolores",
+      "foto": "http://localhost:5173/img/apple-iphone-11-pro-max.jpg",
+      "envio": true
     }
+  ],
+  "carrito": [
+    []
   ]
 }

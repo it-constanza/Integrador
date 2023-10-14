@@ -12,7 +12,7 @@ const Card = ({ producto }) => {
   }
 
   return (
-    <a className="card" href="#">
+    <div className="card" >
       <article className="card__article">
         <div className="card__image-container">
           <img className="card__image" src={producto.foto} alt={producto.nombre} />
@@ -22,10 +22,10 @@ const Card = ({ producto }) => {
           <div className="card__description">
             <p>{producto.detalles}</p>
           </div>
-          <button onClick={() => handleClick(producto)}>Agregar</button>
+          <button className="card__button" onClick={() => handleClick(producto)}>Agregar</button>
         </div>
       </article>
-    </a>
+    </div>
   )
 }
 
