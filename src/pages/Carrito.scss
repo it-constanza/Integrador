@@ -1,9 +1,12 @@
+@import "/src/styles/colores.scss";
+
 table.tabla-carrito {
     border-collapse: collapse;
     width: 95%;
     margin: 1rem auto;
 
-    th, td {
+    th,
+    td {
         border: 1px solid #ddd;
         padding: 8px;
         text-align: left;
@@ -12,4 +15,10 @@ table.tabla-carrito {
     th {
         background-color: #f2f2f2;
     }
+}
+
+.comprar {
+    height: 4em;
+    background-color: $color-negrovio;
+    color: $color-rosa2;
 }

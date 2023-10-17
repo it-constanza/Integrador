@@ -1,3 +1,9 @@
+@import "/src/styles/colores.scss";
+
 #img-row {
     width: 50px;
+}
+
+td {
+    color: $color-negrovio;
 }

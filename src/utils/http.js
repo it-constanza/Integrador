@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 
 /* CRUD => R:Read => GET */
 export const get = async (url) => {
@@ -5,7 +6,7 @@ export const get = async (url) => {
     try {
         const respuesta = await fetch(url) // objeto respuesta.
         console.log(respuesta)
-        if ( !respuesta.ok ) {
+        if (!respuesta.ok) {
             throw new Error(`Algo paso: ${respuesta.status}, ${respuesta.statusText}`)
         }
         const data = await respuesta.json()
@@ -17,15 +18,15 @@ export const get = async (url) => {
 
 }
 /* CRUD => C:CREATE => POST */
-export const post = async (url, dato) => { 
+export const post = async (url, dato) => {
     try {
         const config = {
             method: 'POST',
-            headers: { 'content-type': 'application/json'},
+            headers: { 'content-type': 'application/json' },
             body: JSON.stringify(dato)
         }
         const respuesta = await fetch(url, config)
-        if ( !respuesta.ok ) {
+        if (!respuesta.ok) {
             throw new Error(`Algo paso: ${respuesta.status}, ${respuesta.statusText}`)
         }
         const productoGuardado = await respuesta.json()
@@ -47,7 +48,7 @@ export const put = async (url, id, dato) => {
         }
         const urlFull = url + id
         const respuesta = await fetch(urlFull, config)
-        if( !respuesta.ok ) {
+        if (!respuesta.ok) {
             throw new Error(`Algo ocurrió, ${respuesta.status} ${respuesta.statusText}`)
         }
         const productoEditado = await respuesta.json()
@@ -69,9 +70,9 @@ export const del = async (url, id) => {
     console.warn(urlFull)
 
     try {
-        
+
         const respuesta = await fetch(urlFull, config)
-        if ( !respuesta.ok ) {
+        if (!respuesta.ok) {
             throw new Error(`Algo paso: ${respuesta.status} ${respuesta.statusText}`)
         }
         const resultado = await respuesta.json()

@@ -1,0 +1,84 @@
+@import "/src/styles/colores.scss";
+
+h1 {
+    color: $color-negrovio;
+    display: flex;
+    justify-content: center;
+
+}
+
+h2 {
+    color: $color-negrovio;
+    display: flex;
+    justify-content: center;
+}
+
+.alta-form {
+    display: flex;
+    justify-content: center;
+    color: $color-negrovio;
+
+    h3 {
+        display: flex;
+        justify-content: center;
+        color: $color-negrovio;
+    }
+
+}
+
+.edit-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1em;
+
+
+    label {
+        height: 2em;
+        margin: 0.5em;
+        padding: 0.5em;
+
+    }
+
+    input {
+        height: 2em;
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+    div {
+        height: 3em;
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+}
+
+button {
+    background-color: $color-rosa5;
+    color: $color-blanco;
+    height: 2em;
+    padding: 0.5em;
+    margin: 0.5em;
+    //  box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 0 3px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    border: none;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+
+    button {
+        background-color: $color-rosa5;
+        color: $color-blanco;
+        height: 4em;
+        width: 8em;
+        padding: 0.5em;
+        margin: 0.5em;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 0 3px rgba(0, 0, 0, .3);
+        border-radius: 5px;
+        border: none;
+        margin: 2em;
+
+    }
+}

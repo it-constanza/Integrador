@@ -7,10 +7,11 @@ import { post } from "../utils/http";
 const CarritoContext = createContext()
 /* 2da -> El armado del Provider */
 
-const url = 'http://localhost:8080/carrito'
+const url = 'https://652dcd75f9afa8ef4b27cf76.mockapi.io/carrito1'
 
 const CarritoProvider = ({ children }) => {
     const [agregarAlCarrito, eliminarDelCarrito, limpiarCarrito, carrito] = useLocalStorage('carrito', [])
+
 
     function elProductoEstaEnElCarrito(producto) {
         return carrito.filter(prod => prod.id === producto.id).length
@@ -28,14 +29,13 @@ const CarritoProvider = ({ children }) => {
         } else {
             const productoDeCarrito = obtenerProductoDeCarrito(producto)
             console.log(productoDeCarrito)
-
+            //eliminarDelCarrito(productoDeCarrito.id)
             productoDeCarrito.cantidad++
-
             window.localStorage.setItem('carrito', JSON.stringify(carrito))
-
         }
 
     }
+
     const eliminarCarritoContext = (id) => {
         eliminarDelCarrito(id)
     }
@@ -43,16 +43,14 @@ const CarritoProvider = ({ children }) => {
     const guardarCarritoContext = async () => {
 
         try {
+
             const resultado = await post(url, carrito)
             console.log(resultado)
 
+            limpiarCarrito()
         } catch (error) {
-            console.error('ocurrio un error en Guardar carritocontext', error)
-
+            console.error('Ocurrió un error en guardarCarritoContext()', error)
         }
-        /* Petición asincronica a nuestro banckend */
-        /* limpie el localStorage */
-        limpiarCarrito()
 
     }
 

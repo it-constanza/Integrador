@@ -26,7 +26,7 @@ const Carrito = () => {
   return (
     <>
       <h1>Listado de productos en el carrrito</h1>
-      {!carrito.length <= 0 && <button onClick={handleComprar}>Comprar</button>}
+
       <table className="tabla-carrito">
         <thead>
           <tr>
@@ -65,7 +65,7 @@ const Carrito = () => {
           <tr>
             <td colSpan={4}><strong>Total</strong></td>
             <td><strong>$ {parseFloat(calcularTotal()).toFixed(2)}</strong></td>
-            <td></td>
+            <td>  {!carrito.length <= 0 && <button className="comprar" onClick={handleComprar}>Comprar</button>}</td>
           </tr>
 
         </tbody>
