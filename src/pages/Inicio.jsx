@@ -7,24 +7,24 @@ const Inicio = () => {
   const { productos } = useContext(ProductoContext)
 
   return (
-  <main>
-    <section className="section-cards">
-      <header className="section-cards__header">
-        <h1>Lorem ipsum dolor sit amet.</h1>
-        <p>Se encontraron X productos</p>
-      </header>
+    <main>
+      <section className="section-cards">
+        <header className="section-cards__header">
+          <h1>Los mejores productos a un click.</h1>
+          <p>Se encontraron X productos</p>
+        </header>
 
-      <div className="cards-container">
-        {
-          productos && productos.map( (producto, idx) => (
-            <Card key={idx} producto={producto} />
-          ))
-        }
-        
-      </div> {/* <!-- .cards-container --> */}
+        <div className="cards-container">
+          {
+            productos && productos.map((producto, idx) => (
+              <Card key={idx} producto={producto} />
+            ))
+          }
 
-    </section> {/* <!-- .section-cards --> */}
-  </main> 
+        </div> {/* <!-- .cards-container --> */}
+
+      </section> {/* <!-- .section-cards --> */}
+    </main>
   )
 }
 
