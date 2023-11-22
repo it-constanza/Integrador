@@ -15,21 +15,22 @@ h2 {
 
 .alta-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     color: $color-negrovio;
 
     h3 {
-        display: flex;
-        justify-content: center;
+        //display: flex;
+        //justify-content: center;
         color: $color-negrovio;
     }
 
 }
 
 .edit-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 1em;
+    display: flex;
+    flex-direction: row;
+
 
 
     label {

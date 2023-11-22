@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2'
+
 
 /* CRUD => R:Read => GET */
 export const get = async (url) => {
@@ -19,11 +19,19 @@ export const get = async (url) => {
 }
 /* CRUD => C:CREATE => POST */
 export const post = async (url, dato) => {
+    let config = {}
     try {
-        const config = {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify(dato)
+        if (dato instanceof FormData) {
+            config = {
+                method: 'POST',
+                body: dato
+            }
+        } else {
+            config = {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(dato)
+            }
         }
         const respuesta = await fetch(url, config)
         if (!respuesta.ok) {
@@ -33,9 +41,8 @@ export const post = async (url, dato) => {
         return productoGuardado
 
     } catch (error) {
-        console.error(`ERROR POST`, error)
+        console.error(`ERROR POST, error `)
     }
-
 }
 
 /* CRUD => U:UPDATE => PUT */

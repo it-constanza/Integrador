@@ -8,7 +8,7 @@ const Header = () => {
       <input type="checkbox" id="menu" />
       <Navbar />
       <div className="search-bar">
-      
+
         <form action="" className="search-bar__form-container">
           <label htmlFor="busqueda" className="search-bar__form-label">
             Buscar

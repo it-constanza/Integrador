@@ -12,8 +12,7 @@ const Alta = () => {
       <h1>Formulario de alta de productos</h1>
       <h2>Agregar producto</h2>
 
-      <div className="alta-form"> <Formulario productoAEditar={productoAEditar}
-        setProductoAEditar={setProductoAEditar} /></div>
+      <div className="alta-form">  <Formulario productoAEditar={productoAEditar} setProductoAEditar={setProductoAEditar} /> </div>
 
 
       <hr />

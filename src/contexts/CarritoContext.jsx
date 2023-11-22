@@ -2,12 +2,12 @@ import { createContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { post } from "../utils/http";
 
-/* CREANDO CONTEXTO */
-/* 1er -> Creación del contexto */
-const CarritoContext = createContext()
-/* 2da -> El armado del Provider */
 
-const url = 'https://652dcd75f9afa8ef4b27cf76.mockapi.io/carrito1'
+const CarritoContext = createContext()
+
+
+//const url = 'https://652dcd75f9afa8ef4b27cf76.mockapi.io/carrito1'
+const url = 'http://localhost:8080/api/carritos/'
 
 const CarritoProvider = ({ children }) => {
     const [agregarAlCarrito, eliminarDelCarrito, limpiarCarrito, carrito] = useLocalStorage('carrito', [])

@@ -6,7 +6,6 @@ const Carrito = () => {
   const { carrito, eliminarCarritoContext, guardarCarritoContext } = useContext(CarritoContext)
 
   const handleEliminar = (id) => {
-    //console.log(id)
     eliminarCarritoContext(id)
   }
 
@@ -16,8 +15,6 @@ const Carrito = () => {
     }, 0)
     return sumaTotal
   }
-
-
 
   const handleComprar = () => {
     guardarCarritoContext()
